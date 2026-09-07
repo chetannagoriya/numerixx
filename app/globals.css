@@ -634,3 +634,47 @@ nav a:first-child:after{display:none}.services-preview{background:linear-gradien
   .about-stat{right:12px}.stat-one{top:12%}.stat-two{top:47%}
   .curve-divider,.services-wave,.event-wave,.about-reference-hero:after{bottom:-42px;height:84px}
 }
+
+/* Keep the Home introduction in one composed frame on tablets. */
+@media(min-width:651px) and (max-width:1000px){
+  .pdf-hero{
+    height:590px;
+    min-height:0;
+    padding-bottom:0;
+  }
+  .pdf-portrait{
+    inset:0;
+    width:100%;
+    height:100%;
+    min-height:0;
+  }
+  .pdf-portrait>img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:55% center;
+  }
+  .pdf-hero:before{
+    background:linear-gradient(90deg,#fbf9ff 0%,#fbf9fff8 37%,#fbf9ffbd 54%,#fbf9ff3d 70%,transparent 82%);
+  }
+  .pdf-hero-copy{
+    width:68%;
+    height:100%;
+    padding:34px 24px 76px 7vw;
+  }
+  .pdf-hero h1{
+    margin:10px 0 14px;
+    font-size:clamp(48px,7vw,58px);
+  }
+  .pdf-hero .hero-role{
+    max-width:520px;
+    font-size:15px;
+  }
+  .pdf-hero .ornament{margin:11px 0}
+  .pdf-hero-copy h2{font-size:17px}
+  .pdf-hero-copy>p:not(.eyebrow,.hero-role){
+    max-width:510px;
+    font-size:14px;
+    line-height:1.55;
+  }
+}
