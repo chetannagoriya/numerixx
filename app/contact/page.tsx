@@ -472,14 +472,14 @@ export default function Contact() {
 
         {/* Location Section */}
         <section className="location-reference">
-          <div>
+          <div className="location-info-card">
+            <p className="location-label"><MapPin /> Visit us</p>
             <h2>Our Location</h2>
-            <p>
-              <MapPin /> <strong>Numerixx Consulting</strong>
-              <br />
-              Mohali, Punjab, India
-            </p>
-            <small>Serving clients across India and worldwide through online sessions.</small>
+            <div className="location-address">
+              <span><MapPin /></span>
+              <div><small>Studio address</small><strong>Numerixx Consulting</strong><p>Mohali, Punjab, India</p></div>
+            </div>
+            <div className="location-service-note"><MessageCircle /><p><strong>Online consultations available</strong><span>Serving clients across India and worldwide.</span></p></div>
             <a
               href="https://maps.google.com/?q=Mohali,+Punjab,+India"
               target="_blank"
@@ -497,17 +497,14 @@ export default function Contact() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
-          <div>
-            <h2>Office Details</h2>
-            <p>
-              <Phone /> +91 98765 43210
-            </p>
-            <p>
-              <Mail /> hello@numerixx.com
-            </p>
-            <p>
-              <Clock3 /> Mon - Sat: 10AM - 7PM (IST)
-            </p>
+          <div className="office-info-card">
+            <p className="location-label"><Sparkles /> Connect with us</p>
+            <h2>Our Office</h2>
+            <div className="office-detail-list">
+              <a href="tel:+919876543210"><span><Phone /></span><div><small>Call us</small><strong>+91 98765 43210</strong></div></a>
+              <a href="mailto:hello@numerixx.com"><span><Mail /></span><div><small>Email us</small><strong>hello@numerixx.com</strong></div></a>
+              <div><span><Clock3 /></span><div><small>Working hours</small><strong>Mon - Sat · 10AM - 7PM</strong><em>Indian Standard Time</em></div></div>
+            </div>
           </div>
         </section>
 

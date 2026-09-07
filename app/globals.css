@@ -381,3 +381,75 @@ nav a:first-child:after{display:none}.services-preview{background:linear-gradien
   .faq-list summary>i{width:31px;height:31px}
   .faq-answer{padding:0 54px 18px 17px}
 }
+
+/* Structured location and office information */
+.location-reference{
+  max-width:1220px;
+  margin:5px auto 0;
+  padding:0;
+  display:grid;
+  grid-template-columns:1fr 1.35fr 1fr;
+  gap:0;
+  overflow:hidden;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 16px 40px #29176610;
+}
+.location-info-card,.office-info-card{padding:30px 27px}
+.location-info-card{background:linear-gradient(145deg,#f5f1fc,#fff)}
+.office-info-card{background:#fdfcff}
+.location-label{display:flex;align-items:center;gap:7px;margin:0 0 10px!important;color:#a46d00!important;font-size:10px!important;font-weight:800;text-transform:uppercase;letter-spacing:.1em}
+.location-label svg{width:14px!important;height:14px!important;color:#d18b0b!important}
+.location-reference h2{margin:0 0 23px;font-size:28px}
+.location-address{display:grid;grid-template-columns:44px 1fr;gap:13px;align-items:start}
+.location-address>span,.office-detail-list>a>span,.office-detail-list>div>span{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#ebe4f8;color:#4b2a99}
+.location-address svg,.office-detail-list svg{width:19px;height:19px}
+.location-address div>small,.location-address div>strong,.office-detail-list small,.office-detail-list strong,.office-detail-list em{display:block}
+.location-address div>small,.office-detail-list small{margin-bottom:3px;color:#827995;font-size:9px!important;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+.location-address div>strong{color:#2d1c68;font:600 16px Georgia}
+.location-address div>p{margin:4px 0 0;color:#605873;font-size:13px!important}
+.location-service-note{display:flex;align-items:flex-start;gap:10px;margin:24px 0 18px;padding:12px 13px;border-radius:10px;background:#fff;border:1px solid #e9e2f1}
+.location-service-note>svg{flex:none;width:19px!important;height:19px!important;color:#5330a4!important;margin-top:1px}
+.location-service-note p{margin:0!important}.location-service-note strong,.location-service-note span{display:block}
+.location-service-note strong{color:#3c2874;font-size:11px}.location-service-note span{margin-top:2px;color:#756d89;font-size:10px;line-height:1.45}
+.location-info-card>a{margin-top:0;padding:10px 15px;border-radius:8px;font-weight:800}
+.location-map-wrap{min-height:285px;height:100%;border:0;border-inline:1px solid #e3ddec;border-radius:0;box-shadow:none}
+.location-map-wrap iframe{min-height:285px}
+.office-detail-list{display:grid;gap:0}
+.office-detail-list>a,.office-detail-list>div{
+  display:grid;
+  grid-template-columns:42px 1fr;
+  gap:12px;
+  align-items:center;
+  min-width:0;
+  margin:0!important;
+  padding:13px 0!important;
+  border:0!important;
+  border-bottom:1px solid #ece6f2!important;
+  border-radius:0!important;
+  background:transparent!important;
+  color:inherit!important;
+  box-shadow:none!important;
+}
+.office-detail-list>a:first-child{padding-top:0!important}
+.office-detail-list>div:last-child{padding-bottom:0!important;border-bottom:0!important}
+.office-detail-list>a:hover{opacity:1;transform:translateX(3px)}
+.office-detail-list strong{overflow-wrap:anywhere;color:#2f2264;font-size:12px;line-height:1.35}
+.office-detail-list em{margin-top:3px;color:#8a819b;font:normal 9px "Segoe UI",sans-serif}
+
+@media(max-width:1050px){
+  .location-reference{grid-template-columns:1fr 1.25fr}
+  .office-info-card{grid-column:1/-1;display:grid;grid-template-columns:220px 1fr;gap:0 35px;align-items:start;border-top:1px solid #e3ddec}
+  .office-info-card .location-label,.office-info-card h2{grid-column:1}.office-detail-list{grid-column:2;grid-row:1/3;grid-template-columns:repeat(3,1fr);gap:16px}
+  .office-detail-list>a,.office-detail-list>div{display:grid;grid-template-columns:38px 1fr;align-items:start;border:0!important;padding:0!important}
+  .office-detail-list>a>span,.office-detail-list>div>span{width:38px;height:38px}
+}
+@media(max-width:760px){
+  .location-reference{grid-template-columns:1fr;border-radius:14px}
+  .location-map-wrap{min-height:260px;border:0;border-block:1px solid #e3ddec}
+  .location-map-wrap iframe{min-height:260px}
+  .office-info-card{grid-column:auto;display:block}
+  .office-detail-list{display:grid;grid-template-columns:1fr;gap:0}
+  .office-detail-list>a,.office-detail-list>div{grid-template-columns:42px 1fr;align-items:center;padding:13px 0!important;border-bottom:1px solid #ece6f2!important}
+  .office-detail-list>div:last-child{border-bottom:0!important}
+}
