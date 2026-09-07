@@ -513,19 +513,24 @@ export default function Contact() {
 
         {/* FAQ Section */}
         <section className="faq-reference">
-          <p className="eyebrow">
-            <Sparkles size={14} /> Quick answers
-          </p>
-          <h2>Frequently Asked Questions</h2>
-          {faqs.map(([q, a]) => (
-            <details key={q}>
-              <summary>
-                {q}
-                <span>+</span>
-              </summary>
-              <p>{a}</p>
-            </details>
-          ))}
+          <header className="faq-heading">
+            <p className="eyebrow">
+              <Sparkles size={14} /> Quick answers
+            </p>
+            <h2>Frequently Asked Questions</h2>
+            <p>Everything you need to know before scheduling your consultation.</p>
+          </header>
+          <div className="faq-list">
+            {faqs.map(([q, a]) => (
+              <details key={q}>
+                <summary>
+                  <span>{q}</span>
+                  <i aria-hidden="true">+</i>
+                </summary>
+                <div className="faq-answer"><p>{a}</p></div>
+              </details>
+            ))}
+          </div>
         </section>
       </section>
 
