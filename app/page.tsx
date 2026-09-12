@@ -2,7 +2,6 @@ import Link from 'next/link';
 import {
   ArrowUpRight,
   BriefcaseBusiness,
-  ChevronDown,
   Compass,
   Flower2,
   Heart,
@@ -14,28 +13,6 @@ import {
 } from 'lucide-react';
 import { SiteFooter, SiteHeader } from './site-shell';
 import { TestimonialSlider } from '../components/testimonial-slider';
-const coreServices = [
-  [
-    UserRound,
-    'Personal Numerology Reading',
-    'Understand your core numbers and life purpose with clarity.',
-  ],
-  [
-    BriefcaseBusiness,
-    'Career & Business Guidance',
-    'Make confident career moves and smart business decisions.',
-  ],
-  [
-    Heart,
-    'Relationship Compatibility',
-    'Improve understanding and build stronger, healthier relationships.',
-  ],
-  [
-    Flower2,
-    'Life Path & Personal Growth',
-    'Navigate challenges and embrace growth with purpose.',
-  ],
-];
 const patterns = [
   [UserRound, 'Personal Clarity'],
   [Compass, 'Life Direction & Decision'],
@@ -124,14 +101,6 @@ const clarityQuestions = [
   'Why do certain phases of life feel unusually difficult?',
   'What am I missing that I cannot see?',
 ];
-const faqs = [
-  'What is numerology and how does it work?',
-  'What information do I need for a reading?',
-  'How long does a session take?',
-  'Is my information kept confidential?',
-  'What can I expect in a consultation?',
-  'Who can benefit from numerology?',
-];
 export default function Home() {
   return (
     <main>
@@ -142,21 +111,22 @@ export default function Home() {
             <Sparkles size={15} /> Welcome,
           </p>
           <h1>
-            I’m
+            I’m Dr.
             <br />
             <em>Harpreet Kaur</em>
           </h1>
           <p className="hero-role">
-            Researcher · Strategic Consultant · Human Behaviour Practitioner
+            Founder &amp; Strategic Consultant
           </p>
           <div className="ornament">
             <span />✦<span />
           </div>
-          <h2>Personalised guidance for every stage of life</h2>
+          <h2>Numerical insight for practical decisions</h2>
           <p>
-            Whether you’re facing uncertainty, making an important decision, or
-            seeking deeper self-understanding, my consultations help you
-            recognise recurring patterns and move forward with clarity.
+            Researcher and practitioner exploring numerical systems, human
+            behaviour and decision-making. Through Numerixx, I translate
+            numerical insights into practical perspectives for personal and
+            professional lives.
           </p>
           <Link className="button" href="/services">
             Explore Numerixx <ArrowUpRight size={16} />
@@ -171,30 +141,6 @@ export default function Home() {
           <img src="/assets/contact-hero-harpreet.png" alt="Harpreet Kaur" />
         </div>
         <div className="curve-divider" />
-      </section>
-      <section className="section pdf-services">
-        <div className="section-heading">
-          <p className="eyebrow centered">
-            <Sparkles size={14} /> How I can help
-          </p>
-          <h2>Services</h2>
-          <p>Insightful guidance tailored to your unique journey.</p>
-        </div>
-        <div className="service-grid">
-          {coreServices.map(([Icon, title, copy], i) => (
-            <article className="service-card" key={String(title)}>
-              <span className="number">0{i + 1}</span>
-              <span className="icon">
-                <Icon />
-              </span>
-              <h3>{String(title)}</h3>
-              <p>{String(copy)}</p>
-              <Link href="/services">
-                Learn more <ArrowUpRight size={14} />
-              </Link>
-            </article>
-          ))}
-        </div>
       </section>
       <section className="pdf-approach">
         <img
@@ -302,31 +248,6 @@ export default function Home() {
         <p className="guidance-line">
           Focused insight. Clearer decisions. Meaningful direction.
         </p>
-      </section>
-      <section className="bracelet-teaser-wrap">
-        <Link className="bracelet-teaser" href="/bracelets">
-          <div>
-            <p className="eyebrow">
-              <Sparkles size={14} /> Crystal bracelets
-            </p>
-            <h2>
-              Wear Your Numbers.
-              <br />
-              <em>Carry Your Energy.</em>
-            </h2>
-            <p>
-              Handcrafted crystal bracelets created with authentic natural
-              stones to support your numerology journey.
-            </p>
-            <span className="button gold">
-              Explore bracelets <ArrowUpRight size={16} />
-            </span>
-          </div>
-          <img
-            src="/assets/bracelets-hero.jpg"
-            alt="Tiger's eye and green aventurine crystal bracelets"
-          />
-        </Link>
       </section>
       <section className="chapter">
         <div className="chapter-heading">
@@ -438,36 +359,6 @@ export default function Home() {
               <br />
               <em>You’re looking for clarity.</em>
             </strong>
-          </article>
-          <article className="home-faq">
-            <img
-              src="/assets/faq-numerology-art.jpg"
-              alt="Numerology books and quill"
-            />
-            <div>
-              <p className="eyebrow">A little more clarity before you begin</p>
-              <h3>
-                Find answers to common questions about numerology, consultations
-                and what to expect from your experience.
-              </h3>
-              <div>
-                {faqs.map((q) => (
-                  <details key={q}>
-                    <summary>
-                      {q}
-                      <ChevronDown size={16} />
-                    </summary>
-                    <p>
-                      Each Numerixx consultation is personalised around your
-                      questions, circumstances and goals.
-                    </p>
-                  </details>
-                ))}
-              </div>
-              <Link className="gold-button" href="/contact">
-                Let’s Connect <ArrowUpRight size={16} />
-              </Link>
-            </div>
           </article>
         </div>
         <div className="story-cta">
